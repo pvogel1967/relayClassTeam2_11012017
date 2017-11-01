@@ -17,11 +17,11 @@
       "id": 2
     },
     {
-      "make": "a",
-      "model": "a",
-      "year": 1900,
-      "color": "a",
-      "price": 0,
+      "make": "Subaru",
+      "model": "Outback",
+      "year": 1997,
+      "color": "white",
+      "price": 20001,
       "id": 3
     }
   ],
@@ -285,7 +285,6 @@
         "Avalon",
         "Avalon Hybrid",
         "Camry Hybrid"
-
       ],
       "colors": [
         "Blue Crush Metallic",
