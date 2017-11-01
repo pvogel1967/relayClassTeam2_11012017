@@ -17,12 +17,20 @@
       "id": 2
     },
     {
-      "make": "Subaru",
-      "model": "Outback",
-      "year": 1997,
-      "color": "white",
-      "price": 20001,
-      "id": 3
+      "make": "Toyota",
+      "model": "Prius v",
+      "year": 1900,
+      "color": "Ruby Flare Pearl",
+      "price": 5000,
+      "id": 5
+    },
+    {
+      "make": "Tesla",
+      "model": "Model X",
+      "year": 2019,
+      "color": "Solid Black",
+      "price": 80000,
+      "id": 6
     }
   ],
   "owners": [

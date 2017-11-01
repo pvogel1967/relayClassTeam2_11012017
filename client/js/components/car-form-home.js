@@ -16,6 +16,7 @@ export class CarFormHome extends React.Component {
 
     render() {
         return <CarForm
+            carmakes={this.props.viewer.carmakes.edges}
             onSubmitCar={this.reactInsertCar}
             onShowCarTable={this.props.onShowCarTable} />;
     }
@@ -29,6 +30,7 @@ export const CarFormHomeContainer = createFragmentContainer(
       carmakes {
         edges {
           node {
+            id
             name
             models
             colors
