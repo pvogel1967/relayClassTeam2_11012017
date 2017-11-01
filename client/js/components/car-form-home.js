@@ -23,9 +23,18 @@ export class CarFormHome extends React.Component {
 }
 
 export const CarFormHomeContainer = createFragmentContainer(
-    CarFormHome, graphql`
+  CarFormHome, graphql`
     fragment carFormHome_viewer on Viewer {
       id
+      carmakes {
+        edges {
+          node {
+            name
+            models
+            colors
+          }
+        }
+      }
     }
   `
 );
