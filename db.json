@@ -269,5 +269,47 @@
       "authorId": 1,
       "id": 17
     }
+  ],
+  "carmakes": [
+    {
+      "id": 1,
+      "name": "Toyota",
+      "models": [
+        "Prius",
+        "Prius v",
+        "Prius c",
+        "Prius Prime",
+        "Camry",
+        "Corolla",
+        "Yaris",
+        "Avalon",
+        "Avalon Hybrid",
+        "Camry Hybrid"
+
+      ],
+      "colors": [
+        "Blue Crush Metallic",
+        "Galactic Aqua Mica",
+        "Ruby Flare Pearl",
+        "Celestial Silver Metallic"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tesla",
+      "models": [
+        "Model S",
+        "Model 3",
+        "Model X",
+        "Model Y"
+      ],
+      "colors": [
+        "Deep Blue Metallic",
+        "Signature Red",
+        "Solid Black",
+        "Obsidian Black Metallic",
+        "Midnight Silver Metallic"
+      ]
+    }
   ]
 }

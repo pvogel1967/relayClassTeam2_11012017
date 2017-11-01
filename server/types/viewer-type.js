@@ -3,9 +3,11 @@ import { globalIdField, connectionArgs, connectionFromArray } from 'graphql-rela
 
 import { widgetConnectionType } from '../connections/widgets';
 import { carConnectionType } from '../connections/cars';
+import { carMakeConnectionType} from '../connections/carMakes';
 import { WidgetData } from '../models/widget-data';
 import { CarData } from '../models/car-data';
-import { Widget, Viewer, Car } from '../models/graphql-models';
+import { CarMakeData} from '../models/car-make-data';
+import { Widget, Viewer, Car, CarMake } from '../models/graphql-models';
 import { nodeInterface } from '../utils/node-definitions';
 import { registerType } from '../utils/resolve-type';
 
@@ -41,6 +43,20 @@ export const viewerType = new GraphQLObjectType({
           conn.totalCount = carModels.length;
           return conn;
 
+        });
+      },
+    },
+    carmakes: {
+      type: carMakeConnectionType,
+      description: 'get all possible car makes and their details',
+      args: connectionArgs,
+      resolve: (_, args, {baseUrl}) => {
+        const carMakeData = new CarMakeData(baseUrl);
+        return carMakeData.all().then(makes=>{
+          const carMakes = makes.map(m=>Object.assign(new CarMake(), m));
+          const conn = connectionFromArray(carMakes, args);
+          conn.totalCount = carMakes.length;
+          return conn;
         });
       },
     },

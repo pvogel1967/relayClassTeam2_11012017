@@ -5,3 +5,6 @@ export class Widget { }
 export class Car { }
 
 export class Book { }
+
+export class CarMake { }
+
