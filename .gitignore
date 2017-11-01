@@ -43,3 +43,5 @@ prep
 server-dist
 client-dist
 schema.graphql
+.idea/
+client/js/components/__generated__
