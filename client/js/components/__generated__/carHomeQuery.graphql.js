@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 13ef9f66b3db471d8f7cdb8d1d1694b2
+ * @relayHash 139d5e5d46adda49300ec6084b21c937
  */
 
 /* eslint-disable */
@@ -36,6 +36,7 @@ fragment carTable_viewer on Viewer {
       cursor
     }
     totalCount
+    totalValue
     pageInfo {
       endCursor
       hasNextPage
@@ -214,6 +215,13 @@ const batch /*: ConcreteBatch*/ = {
                 "storageKey": null
               },
               {
+                "kind": "ScalarField",
+                "alias": null,
+                "args": null,
+                "name": "totalValue",
+                "storageKey": null
+              },
+              {
                 "kind": "LinkedField",
                 "alias": null,
                 "args": null,
@@ -276,7 +284,7 @@ const batch /*: ConcreteBatch*/ = {
       }
     ]
   },
-  "text": "query carHomeQuery {\n  viewer {\n    id\n    ...carTable_viewer\n  }\n}\n\nfragment carTable_viewer on Viewer {\n  cars(first: 100) {\n    edges {\n      node {\n        id\n        ...carViewRow_car\n        __typename\n      }\n      cursor\n    }\n    totalCount\n    pageInfo {\n      endCursor\n      hasNextPage\n      hasPreviousPage\n      startCursor\n    }\n  }\n}\n\nfragment carViewRow_car on Car {\n  id\n  make\n  model\n  year\n  color\n  price\n}\n"
+  "text": "query carHomeQuery {\n  viewer {\n    id\n    ...carTable_viewer\n  }\n}\n\nfragment carTable_viewer on Viewer {\n  cars(first: 100) {\n    edges {\n      node {\n        id\n        ...carViewRow_car\n        __typename\n      }\n      cursor\n    }\n    totalCount\n    totalValue\n    pageInfo {\n      endCursor\n      hasNextPage\n      hasPreviousPage\n      startCursor\n    }\n  }\n}\n\nfragment carViewRow_car on Car {\n  id\n  make\n  model\n  year\n  color\n  price\n}\n"
 };
 
 module.exports = batch;

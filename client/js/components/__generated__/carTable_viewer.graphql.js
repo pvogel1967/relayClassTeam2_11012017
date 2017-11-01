@@ -16,6 +16,7 @@ export type carTable_viewer = {|
       |};
     |}>;
     +totalCount: ?number;
+    +totalValue: ?number;
   |};
 |};
 */
@@ -85,6 +86,13 @@ const fragment /*: ConcreteFragment*/ = {
           "alias": null,
           "args": null,
           "name": "totalCount",
+          "storageKey": null
+        },
+        {
+          "kind": "ScalarField",
+          "alias": null,
+          "args": null,
+          "name": "totalValue",
           "storageKey": null
         }
       ],

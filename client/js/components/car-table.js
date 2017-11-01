@@ -43,6 +43,7 @@ export const CarTableContainer = createFragmentContainer(CarTable, graphql`
         }
       }
       totalCount
+      totalValue
     }
   }
 `);

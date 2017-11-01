@@ -44,7 +44,7 @@ export class CarHome extends React.Component {
               props.viewer.id,
               carId,
             );
-          };          
+          };
 
           if (props) {
             return <div>

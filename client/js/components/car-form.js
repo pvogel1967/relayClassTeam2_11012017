@@ -24,7 +24,9 @@ export class CarForm extends React.Component {
   } 
 
   onClick = () => {
-    this.props.onSubmitCar({ ...this.state });
+    this.props.onSubmitCar({ ...this.state }).then(() => {
+        this.props.onShowCarTable();
+    });
     this.setState(this.getInitialState());
   }
 
